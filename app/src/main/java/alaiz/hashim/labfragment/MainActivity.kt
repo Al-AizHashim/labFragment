@@ -2,6 +2,7 @@ package alaiz.hashim.labfragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,4 +19,17 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
     }
+
+
+/*
+    override fun onStudentSelected(studentId: UUID) {
+        val fragment =  StudentFragment.newInstance(studentId)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+ */
 }

@@ -3,47 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
-    android:padding="8dp"
-    tools:context=".StudentItemListFragment">
+    android:layout_height="100dp"
+    android:padding="2dp">
 
     <TextView
         android:id="@+id/studentNameTV"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:text="Student name"
-        app:layout_constraintBottom_toTopOf="@+id/studentNumberTV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
-
-    <TextView
-        android:id="@+id/studentNumberTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Student number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/studentNumberTV"
+        app:layout_constraintEnd_toStartOf="@+id/studentStatustextView"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toEndOf="@+id/studentNumberTV"
+        app:layout_constraintTop_toTopOf="@+id/studentNumberTV"
         app:layout_constraintVertical_bias="0.506" />
 
     <TextView
-        android:id="@+id/studentStatustextView"
-        android:layout_width="0dp"
+        android:id="@+id/studentNumberTV"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="status"
+        android:text="Student number"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <TextView
+        android:id="@+id/studentStatustextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/studentNameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toEndOf="@+id/studentNumberTV"
         app:layout_constraintTop_toTopOf="@+id/studentNameTV"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintVertical_bias="0.506" />
+
+    <ImageView
+        android:id="@+id/deleteImageView"
+        android:layout_width="57dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="84dp"
+        app:layout_constraintBottom_toBottomOf="@+id/studentStatustextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/studentStatustextView"
+        app:layout_constraintTop_toTopOf="@+id/studentStatustextView"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@android:drawable/ic_delete" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
